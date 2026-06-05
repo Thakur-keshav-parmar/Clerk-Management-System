@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDUTRON – Installation Guide</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f4ff; color: #1e293b; }
+
+  .header {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    color: #fff;
+    padding: 40px 32px 32px;
+    text-align: center;
+  }
+  .header h1 { font-size: 2rem; letter-spacing: 1px; }
+  .header p  { margin-top: 8px; font-size: 1rem; opacity: .85; }
+
+  .container { max-width: 820px; margin: 32px auto; padding: 0 20px 60px; }
+
+  .badge {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 50%;
+    width: 34px; height: 34px;
+    line-height: 34px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .step {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.07);
+    padding: 22px 24px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .step-body { flex: 1; }
+  .step-body h2 { font-size: 1.05rem; color: #1d4ed8; margin-bottom: 8px; }
+  .step-body p  { font-size: .92rem; line-height: 1.65; color: #374151; }
+  .step-body ul { margin: 8px 0 0 18px; font-size: .92rem; line-height: 1.8; color: #374151; }
+
+  code {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-family: 'Consolas', monospace;
+    font-size: .88rem;
+    color: #1d4ed8;
+  }
+
+  .url-box {
+    background: #eff6ff;
+    border: 2px dashed #93c5fd;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 10px;
+    font-family: 'Consolas', monospace;
+    font-size: .95rem;
+    color: #1e3a8a;
+    word-break: break-all;
+  }
+
+  .cred-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: .91rem;
+  }
+  .cred-table th {
+    background: #eff6ff;
+    padding: 8px 12px;
+    text-align: left;
+    color: #1d4ed8;
+    border-bottom: 2px solid #bfdbfe;
+  }
+  .cred-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .cred-table tr:last-child td { border-bottom: none; }
+
+  .warn {
+    background: #fef9c3;
+    border-left: 4px solid #f59e0b;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    font-size: .88rem;
+    color: #78350f;
+  }
+  .success {
+    background: #dcfce7;
+    border-left: 4px solid #16a34a;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    font-size: .88rem;
+    color: #14532d;
+  }
+
+  .section-title {
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #64748b;
+    margin: 32px 0 12px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: .8rem;
+    color: #94a3b8;
+    margin-top: 40px;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .step { box-shadow: none; border: 1px solid #e2e8f0; }
+    .header { background: #1d4ed8 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🎓 EDUTRON</h1>
+  <p>Coaching Institute Management System — Installation Guide</p>
+</div>
+
+<div class="container">
+
+  <p class="section-title">📋 Requirements before you start</p>
+  <div class="step" style="align-items:center;">
+    <div class="step-body">
+      <ul>
+        <li>Windows PC with <strong>XAMPP</strong> installed &nbsp;→&nbsp; <code>xampp-windows-x64-*.exe</code></li>
+        <li>XAMPP version <strong>7.4 or higher</strong> (PHP 8+ recommended)</li>
+        <li>At least <strong>200 MB</strong> free disk space</li>
+        <li>The zip file: <strong>clerk-management-system.zip</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- STEP 1 -->
+  <p class="section-title">🔧 Installation Steps</p>
+
+  <div class="step">
+    <div class="badge">1</div>
+    <div class="step-body">
+      <h2>Install XAMPP (skip if already installed)</h2>
+      <p>Download XAMPP from <code>apachefriends.org</code> and install it. The default install location is <code>C:\xampp\</code>. Keep all defaults during installation.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="badge">2</div>
+    <div class="step-body">
+      <h2>Start Apache and MySQL</h2>
+      <p>Open <strong>XAMPP Control Panel</strong> (search for it in Start menu or open <code>C:\xampp\xampp-control.exe</code>).</p>
+      <ul>
+        <li>Click <strong>Start</strong> next to <strong>Apache</strong></li>
+        <li>Click <strong>Start</strong> next to <strong>MySQL</strong></li>
+        <li>Both rows should turn <span style="color:#16a34a;font-weight:bold;">green</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="badge">3</div>
+    <div class="step-body">
+      <h2>Extract the ZIP file</h2>
+      <p>Right-click <strong>clerk-management-system.zip</strong> → <em>Extract All…</em></p>
+      <ul>
+        <li>Extract to: <code>C:\xampp\htdocs\</code></li>
+        <li>You should now have the folder: <code>C:\xampp\htdocs\clerk-management-system\</code></li>
+        <li>Make sure <code>index.html</code> is directly inside that folder (not nested deeper)</li>
+      </ul>
+      <div class="warn">⚠ If a folder called <code>clerk-management-system</code> already exists, delete or rename it first before extracting.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="badge">4</div>
+    <div class="step-body">
+      <h2>Run the One-Click Installer</h2>
+      <p>Open any browser (Chrome / Edge) and go to:</p>
+      <div class="url-box">http://localhost/clerk-management-system/install.php</div>
+      <p style="margin-top:10px;">This will automatically:</p>
+      <ul>
+        <li>Create the <strong>coaching_db</strong> database</li>
+        <li>Import all tables and data</li>
+        <li>Apply all required migrations</li>
+        <li>Set up default login accounts</li>
+      </ul>
+      <div class="success">✓ When you see "Installation Complete!" the setup is done.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="badge">5</div>
+    <div class="step-body">
+      <h2>Delete the installer (important!)</h2>
+      <p>After installation is complete, delete the file:</p>
+      <div class="url-box">C:\xampp\htdocs\clerk-management-system\install.php</div>
+      <div class="warn">⚠ Leaving <code>install.php</code> accessible is a security risk — anyone who visits that URL can reset/overwrite the database.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="badge">6</div>
+    <div class="step-body">
+      <h2>Open the Application</h2>
+      <p>Go to:</p>
+      <div class="url-box">http://localhost/clerk-management-system/</div>
+      <p style="margin-top:12px;">Login with these default credentials:</p>
+      <table class="cred-table">
+        <tr><th>Role</th><th>Username</th><th>Password</th></tr>
+        <tr><td>👑 Admin</td><td><code>admin</code></td><td><code>admin123</code></td></tr>
+        <tr><td>📚 Teacher</td><td><code>teacher</code></td><td><code>teacher123</code></td></tr>
+      </table>
+      <div class="warn">⚠ Change the admin password after first login via <strong>Settings → User Management</strong>.</div>
+    </div>
+  </div>
+
+  <!-- TROUBLESHOOTING -->
+  <p class="section-title">🛠 Troubleshooting</p>
+
+  <div class="step">
+    <div class="badge" style="background:#ef4444;">!</div>
+    <div class="step-body">
+      <h2>Apache or MySQL won't start</h2>
+      <ul>
+        <li>Port 80 may be in use — try changing Apache to port <strong>8080</strong> in XAMPP → Config → httpd.conf</li>
+        <li>Port 3306 may be in use — check if another MySQL is running (Wamp, local MySQL service)</li>
+        <li>Run XAMPP Control Panel as <strong>Administrator</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="badge" style="background:#ef4444;">!</div>
+    <div class="step-body">
+      <h2>install.php shows a database error</h2>
+      <ul>
+        <li>Make sure MySQL is running (green in XAMPP Control Panel)</li>
+        <li>Make sure the <code>database/</code> folder inside the zip contains <code>coaching_db.sql</code></li>
+        <li>Try opening: <code>http://localhost/phpmyadmin</code> — if it loads, MySQL is fine</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="badge" style="background:#ef4444;">!</div>
+    <div class="step-body">
+      <h2>Page shows 404 / "Not Found"</h2>
+      <ul>
+        <li>Make sure the folder name is exactly <code>clerk-management-system</code> (no spaces, lowercase)</li>
+        <li>Confirm Apache is running (green in XAMPP)</li>
+        <li>Check that <code>index.html</code> exists at <code>C:\xampp\htdocs\clerk-management-system\index.html</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    EDUTRON Coaching Management System &nbsp;|&nbsp; For support contact the developer
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Options -Indexes
+RewriteEngine On
+
+# Serve the frontend's static assets directly
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Everything else goes to index.html (SPA fallback)
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteRule ^ index.html [L]

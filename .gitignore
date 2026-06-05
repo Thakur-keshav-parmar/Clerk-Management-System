@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Environment / secrets
+backend/.env
+.env
+
+# SSH keys — NEVER commit
+*.pem
+*.ppk
+
+# Local data (dev only)
+backend/data/db.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp

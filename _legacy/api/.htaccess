@@ -1,0 +1,6 @@
+Options -Indexes
+RewriteEngine On
+
+# Send all requests (that aren't real files) through index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
